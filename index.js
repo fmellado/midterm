@@ -19,7 +19,7 @@ mongoose.connect(dbConfig.url,{
     .then(() => {
         console.log("Successfully connected to the database");
     }). catch(err => {
-            console.log("Successfulle Conneccted to the database");
+            console.log("Successfully Conneccted to the database");
     }).catch*(err => {
         console.log('Could not connect to the datbase. Existing now....', err);
         process.exit();
@@ -32,7 +32,7 @@ app.get('/', (req, res)=>{
         "message": "successfull!"
     })
 })
-require('./app/routes/todo.routes')(app);
+require('./app/routes/student.routes')(app);
 
 app.listen(4000, () =>{
     console.log('Server is Working Por ahora');
